@@ -16,7 +16,7 @@ Template.hello.helpers({
     return Meteor.user();
   },
   userEmails() {
-    return Meteor.user().emails.map(({address}) => address).join(', ');
+    return Meteor.user()?.emails.map(({address}) => address).join(', ');
   }
 });
 
