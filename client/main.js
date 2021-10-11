@@ -21,8 +21,11 @@ Template.hello.helpers({
 });
 
 Template.hello.events({
-  'click button'(event, instance) {
+  'click .clickcounter'(event, instance) {
     // increment the counter when button is clicked
     instance.counter.set(instance.counter.get() + 1);
+  },
+  'click .logout'(event) {
+     AccountsTemplates.logout();
   },
 });

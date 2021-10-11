@@ -11,10 +11,14 @@
 </body>
 
 <template name="hello">
-  <button>Click Me</button>
+  <button class="clickcounter">Click Me</button>
   <p>You've pressed the button {{counter}} times.</p>
-  Id: {{ user._id }}
-  Emails: {{ userEmails }}
+
+  {{#if user}}
+  <p>Id: {{ user._id }}</p>
+  <p>Emails: {{ userEmails }}</p>
+  <p><button class="logout">Logout</button></p>
+  {{/if}}
 </template>
 
 <template name="info">
