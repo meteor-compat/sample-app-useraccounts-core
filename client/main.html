@@ -3,11 +3,7 @@
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
-
-  {{> hello}}
-  {{> info}}
-  {{> atForm}}
+  {{> masterLayout}}
 </body>
 
 <template name="hello">
@@ -29,4 +25,21 @@
     <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
     <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
   </ul>
+</template>
+
+<template name="masterLayout">
+
+  <h1>Welcome to Meteor!</h1>
+
+  {{> hello}}
+  {{> info}}
+  {{> atForm}}
+
+  {{> yield region='nav'}}
+
+  <div id="content">
+    {{> yield}}
+  </div>
+
+  {{> yield region='footer'}}
 </template>

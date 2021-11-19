@@ -23,3 +23,5 @@ shell-server@0.5.0            # Server-side component of the `meteor shell` comm
 useraccounts:bootstrap
 accounts-password@2.2.0
 useraccounts:core
+iron:router
+useraccounts:iron-routing
